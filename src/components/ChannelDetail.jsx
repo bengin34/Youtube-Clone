@@ -21,26 +21,28 @@ const ChannelDetail = () => {
   }, [id]);
   return (
     <Box minHeight="95vh">
-    <Box>
-      <div
-        style={{
-          background: "rgb(99,101,53)",
-          background:
-            "linear-gradient(17deg, rgba(99,101,53,1) 18%, rgba(36,0,0,1) 51%, rgba(212,0,255,1) 83%)",
-          zIndex: 10,
-          height: "300px",
+      <Box>
+        <div
+          style={{
+            background: "rgb(99,101,53)",
+            background:
+              "linear-gradient(17deg, rgba(99,101,53,1) 18%, rgba(36,0,0,1) 51%, rgba(212,0,255,1) 83%)",
+            zIndex: 10,
+            height: "300px",
+          }}
+        >
+          <ChannelCard channelDetail={channelDetail} />
+        </div>
+      </Box>
+      <Box
+        p={2}
+        display="flex"
+        sx={{
+          mr: { sm: "100px" },
         }}
       >
-        <ChannelCard channelDetail={channelDetail} />
-      </div>
-    </Box>
-          <Box sx={{
-            mr:{sm: '100px'}
-          }}>
-            <Videos videos={videos} />
-
-          </Box>
-
+        <Videos videos={videos} />
+      </Box>
     </Box>
   );
 };
